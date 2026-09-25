@@ -1,120 +1,228 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Петруха — Натуральные продукты из мяса птицы</title>
+    <title>ПЕТРУХА — Экосистема натуральных продуктов птицеводства</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
         <div class="container header__container">
-            <div class="header__logo">ПЕТРУХА<span>.промо</span></div>
+            <!-- Высокотехнологичный кастомный логотип бренда на чистом коде SVG -->
+            <div class="logo">
+                <svg class="logo__icon" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+                </svg>
+                <div class="logo__text">ПЕТРУХА<span>БИО</span></div>
+            </div>
+            
             <nav class="header__nav">
                 <button class="nav-btn active" data-target="home">Главная</button>
                 <button class="nav-btn" data-target="products">Продукция</button>
-                <button class="nav-btn" data-target="about">О производстве</button>
-                <button class="nav-btn" data-target="recipes">Рецепты</button>
+                <button class="nav-btn" data-target="about">Технологии</button>
+                <button class="nav-btn" data-target="recipes">Шеф-Рецепты</button>
             </nav>
         </div>
     </header>
 
-    <main class="content-wrapper">
+    <main class="main-content">
+        
+        <!-- ВКЛАДКА 1: ГЛАВНАЯ (Премиум-презентация) -->
         <section id="home" class="tab-content active">
             <div class="hero">
-                <div class="container">
-                    <span class="hero__tagline">100% Натуральный продукт Беларуси</span>
-                    <h1 class="hero__title">Свежее мясо птицы для здорового питания</h1>
-                    <p class="hero__text">Выращено на натуральных сбалансированных кормах собственного производства без ГМО, антибиотиков и гормонов роста.</p>
-                    <button class="btn btn--primary next-tab-trigger" data-to="products">Открыть каталог</button>
+                <div class="container hero__grid">
+                    <div class="hero__info">
+                        <div class="hero__badge">🏆 Стандарт качества 2026</div>
+                        <h1 class="hero__title">Чистая экология вашего питания</h1>
+                        <p class="hero__text">Бескомпромиссный контроль качества на каждом этапе производства. Натуральные корма собственного урожая, артезианская вода и никаких антибиотиков.</p>
+                        <div class="hero__buttons">
+                            <button class="btn btn--primary next-tab-trigger" data-to="products">Перейти в каталог</button>
+                            <button class="btn btn--secondary next-tab-trigger" data-to="about">Узнать о био-стандартах</button>
+                        </div>
+                    </div>
+                    <!-- Профессиональная фишка: Интерактивный интерактивный виджет статистики -->
+                    <div class="hero__visual">
+                        <div class="stats-card">
+                            <div class="stats-card__item">
+                                <div class="stats-card__num" id="ecoCounter">0</div>
+                                <div class="stats-card__label">Тестов качества пройдено сегодня</div>
+                            </div>
+                            <div class="stats-card__progress">
+                                <div class="stats-card__bar"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- ВКЛАДКА 2: ПРОДУКЦИЯ (Уровневая премиум-сетка) -->
         <section id="products" class="tab-content">
-            <div class="container page-padding">
-                <h2 class="page-title">Наш ассортимент</h2>
+            <div class="container page-section">
+                <div class="section-meta">ASSORTMENT</div>
+                <h2 class="section-title">Каталог охлажденной продукции</h2>
+                <p class="section-subtitle">Свежее натуральное мясо птицы в современной барьерной упаковке.</p>
+                
                 <div class="grid">
-                    <div class="product-card">
-                        <div class="product-card__badge">Хит продаж</div>
-                        <div class="product-card__img">🍗</div>
-                        <h3>Филе цыпленка-бройлера</h3>
-                        <p>Нежное диетическое филе. Идеально для запекания, жарки и супов.</p>
+                    <div class="card product-card">
+                        <div class="product-card__line"></div>
+                        <span class="product-card__category">Натуральная линия</span>
+                        <h3>Филе цыпленка Премиум</h3>
+                        <p>Диетическое крупное филе грудки без кожи. Идеальный источник чистого белка с минимальным содержанием жира.</p>
+                        <div class="product-card__specs">
+                            <span>Белки: 23г</span> • <span>Жиры: 1.5г</span>
+                        </div>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card__badge">Популярно</div>
-                        <div class="product-card__img">🥩</div>
-                        <h3>Мякоть бедра охлажденная</h3>
-                        <p>Сочное мясо цыпленка без кости. Быстро готовится и сохраняет сочность.</p>
+                    <div class="card product-card">
+                        <div class="product-card__line"></div>
+                        <span class="product-card__category">Для запекания</span>
+                        <h3>Мякоть бедра бескостная</h3>
+                        <p>Сочное мясо бедра в фирменном маринаде из натуральных белорусских трав. Сохраняет сочность при любом типе жарки.</p>
+                        <div class="product-card__specs">
+                            <span>Белки: 19г</span> • <span>Жиры: 8г</span>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div class="product-card__line"></div>
+                        <span class="product-card__category">Быстро и вкусно</span>
+                        <h3>Наггетсы Классические</h3>
+                        <p>Изготовлены из рубленого филе грудки в легкой хрустящей панировке. Без искусственных консервантов и усилителей вкуса.</p>
+                        <div class="product-card__specs">
+                            <span>Ready-to-cook</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ВКЛАДКА 3: О ПРОИЗВОДСТВЕ (Деловой инфо-дизайн) -->
         <section id="about" class="tab-content">
-            <div class="container page-padding">
-                <h2 class="page-title">Замкнутый цикл качества</h2>
-                <div class="about-block">
-                    <h3>Как мы это делаем?</h3>
-                    <p>Торговая марка «Петруха» — один из ведущих производителей мяса птицы в Беларуси. Наше главное преимущество — полностью замкнутый цикл производства. Мы сами выращиваем зерно и производим натуральные комбикорма.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="recipes" class="tab-content">
-            <div class="container page-padding">
-                <h2 class="page-title">Кулинарные идеи</h2>
-                <div class="grid">
-                    <div class="recipe-card">
-                        <span class="recipe-card__time">⏱ 40 минут</span>
-                        <h3>Стейк из филе в духовке</h3>
-                        <p>Замаринуйте филе «Петруха» в оливковом масле со специями, запекайте при 180°C.</p>
+            <div class="container page-section">
+                <div class="section-meta">BIOLOGY & INFRASTRUCTURE</div>
+                <h2 class="section-title">Замкнутый цикл производства</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-card__step">01</div>
+                        <h3>Свои поля и корма</h3>
+                        <p>Мы самостоятельно выращиваем зерновые культуры и производим комбикорма на собственных элеваторах. Это гарантирует отсутствие ГМО в рационе птицы.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card__step">02</div>
+                        <h3>Инкубация и биозащита</h3>
+                        <p>Птицефабрики оснащены передовым европейским оборудованием. Внедрен строжайший ветеринарный и санитарный контроль Air-Flow уровня стерильности.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card__step">03</div>
+                        <h3>Smart-Логистика</h3>
+                        <p>Герметичная упаковка в модифицированной газовой среде (МГС) консервирует свежесть продукта без заморозки на срок до 12 суток при температуре 0-4°C.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ВКЛАДКА 4: РЕЦЕПТЫ (Минималистичные ресторанные карты) -->
+        <section id="recipes" class="tab-content">
+            <div class="container page-section">
+                <div class="section-meta">GOURMET</div>
+                <h2 class="section-title">Рецепты от бренд-шефа</h2>
+                <p class="section-subtitle">Профессиональные кулинарные решения для вашей кухни.</p>
+                
+                <div class="grid">
+                    <div class="card recipe-card">
+                        <div class="recipe-card__header">
+                            <span class="recipe-card__difficulty">Легко</span>
+                            <span class="recipe-card__time">⏱ 35 мин</span>
+                        </div>
+                        <h3>Филе-гриль в лимонно-тимьяновом маринаде</h3>
+                        <p>Тонко нарежьте филе «Петруха Премиум», замаринуйте в соке лимона, оливковом масле и свежем тимьяне на 10 минут. Обжаривайте на раскаленной сковороде-гриль по 4 минуты с каждой стороны.</p>
+                    </div>
+                    <div class="card recipe-card">
+                        <div class="card__glowing-border"></div>
+                        <div class="recipe-card__header">
+                            <span class="recipe-card__difficulty">Средний</span>
+                            <span class="recipe-card__time">⏱ 50 мин</span>
+                        </div>
+                        <h3>Медальоны из бедра в сливочно-грибном соусе</h3>
+                        <p>Обжарьте мякоть бедра до золотистой корочки. В той же сковороде припустите шампиньоны с луком, залейте 20% сливками и томите мясо в соусе на медленном огне еще 15 минут.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>Учебный проект-демо бренда «Петруха». Разработчик: Роман Некрашевич</p>
-            <p>Email: <a href="mailto:Nekrashevichroman51@gmail.com">Nekrashevichroman51@gmail.com</a> | TG: @RV11111111</p>
+        <div class="container footer__grid">
+            <div class="footer__info">
+                <p class="footer__copy">© 2026 Промо-экосистема «Петруха». Все права защищены в рамках учебного портфолио.</p>
+                <p class="footer__dev">Архитектура и верстка: <strong>Роман Некрашевич</strong></p>
+            </div>
+            <div class="footer__contacts">
+                <a href="mailto:Nekrashevichroman51@gmail.com" class="footer__link">Nekrashevichroman51@gmail.com</a>
+                <a href="https://t.me" class="footer__link footer__link--tg" target="_blank">Telegram: @RV11111111</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Логика переключения вкладок с плавной анимацией и счетчиком -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navButtons = document.querySelectorAll('.nav-btn');
             const tabContents = document.querySelectorAll('.tab-content');
             const triggerButtons = document.querySelectorAll('.next-tab-trigger');
 
+            // Исправленная функция переключения вкладок с плавной анимацией
             function switchTab(tabId) {
                 navButtons.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    content.style.opacity = '0';
+                });
+
                 const targetTab = document.getElementById(tabId);
+                // Тут строка написана в один ряд без опасных для телефона переносов
                 const targetBtn = document.querySelector(`[data-target="${tabId}"]`);
-                if (targetTab) targetTab.classList.add('active');
+                
+                if (targetTab) {
+                    targetTab.classList.add('active');
+                    setTimeout(() => {
+                        targetTab.style.opacity = '1';
+                    }, 50);
+                }
                 if (targetBtn) targetBtn.classList.add('active');
+                
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
+            // Навешиваем клики на кнопки навигации в шапке
             navButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    switchTab(button.getAttribute('data-target'));
+                    const target = button.getAttribute('data-target');
+                    switchTab(target);
                 });
             });
 
+            // Навешиваем клики на внутренние кнопки (например, "Перейти в каталог")
             triggerButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    switchTab(button.getAttribute('data-to'));
+                    const target = button.getAttribute('data-to');
+                    switchTab(target);
                 });
             });
+
+            // Интерактивный живой счетчик для главной страницы
+            const ecoCounter = document.getElementById('ecoCounter');
+            if (ecoCounter) {
+                let count = 4250;
+                setInterval(() => {
+                    count += Math.floor(Math.random() * 3) + 1;
+                    ecoCounter.innerText = count.toLocaleString();
+                }, 2500);
+            }
         });
     </script>
-</body>
-</html>
