@@ -8,6 +8,39 @@
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <style>
+        :root { --bg-base: #090d16; --card-surface: #111827; --brand-emerald: #10b981; --brand-lime: #84cc16; --text-pure: #f9fafb; --text-muted: #9ca3af; --border-light: rgba(255, 255, 255, 0.06); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Manrope', sans-serif; background-color: var(--bg-base) !important; color: var(--text-pure); overflow-x: hidden; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .header { background: rgba(9, 13, 22, 0.95); border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 1000; }
+        .header__container { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { display: flex; align-items: center; gap: 10px; color: var(--text-pure); }
+        .logo__icon { width: 28px; height: 28px; color: var(--brand-emerald); fill: currentColor; }
+        .logo__text { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.35rem; font-weight: 800; }
+        .logo__text span { color: var(--brand-emerald); }
+        .header__nav { display: flex; gap: 8px; }
+        .nav-btn { background: transparent; border: none; padding: 10px 15px; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); cursor: pointer; border-radius: 8px; }
+        .nav-btn.active { background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.2); }
+        .tab-content { display: none; opacity: 1; padding: 40px 0; }
+        .tab-content.active { display: block; }
+        .hero { padding: 60px 0; text-align: center; }
+        .hero__badge { display: inline-block; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-light); padding: 6px 14px; border-radius: 100px; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
+        .hero__title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: #fff; }
+        .hero__text { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; }
+        .hero__buttons { display: flex; flex-direction: column; gap: 12px; max-width: 300px; margin: 0 auto; }
+        .btn { padding: 14px 24px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: none; text-align: center; text-decoration: none; width: 100%; }
+        .btn--primary { background: linear-gradient(135deg, var(--brand-emerald), var(--brand-lime)); color: #042f1a; }
+        .btn--secondary { background: rgba(255, 255, 255, 0.03); color: var(--text-pure); border: 1px solid var(--border-light); }
+        .stats-card { background: var(--card-surface); border: 1px solid var(--border-light); padding: 24px; border-radius: 16px; margin-top: 40px; text-align: center; }
+        .stats-card__num { font-size: 2.5rem; font-weight: 800; color: var(--brand-emerald); }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px 0; }
+        .card { background: var(--card-surface); border: 1px solid var(--border-light); padding: 24px; border-radius: 12px; }
+        .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 20px; }
+        .footer { background: #060910; border-top: 1px solid var(--border-light); padding: 40px 20px; text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 40px; }
+        .footer a { color: var(--brand-emerald); text-decoration: none; }
+        </style>
 </head>
 <body>
 
