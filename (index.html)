@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петруха — Натуральные продукты из мяса птицы</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">ПЕТРУХА<span>.промо</span></div>
+            <nav class="header__nav">
+                <button class="nav-btn active" data-target="home">Главная</button>
+                <button class="nav-btn" data-target="products">Продукция</button>
+                <button class="nav-btn" data-target="about">О производстве</button>
+                <button class="nav-btn" data-target="recipes">Рецепты</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        
+        <!-- ВКЛАДКА 1: ГЛАВНАЯ -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <div class="container">
+                    <span class="hero__tagline">100% Натуральный продукт Беларуси</span>
+                    <h1 class="hero__title">Свежее мясо птицы для здорового питания</h1>
+                    <p class="hero__text">Выращено на натуральных сбалансированных кормах собственного производства без ГМО, антибиотиков и гормонов роста. Идеальный выбор для всей семьи.</p>
+                    <button class="btn btn--primary next-tab-trigger" data-to="products">Открыть каталог</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ВКЛАДКА 2: ПРОДУКЦИЯ -->
+        <section id="products" class="tab-content">
+            <div class="container page-padding">
+                <h2 class="page-title">Наш ассортимент</h2>
+                <p class="page-subtitle">Высококачественная продукция в герметичной упаковке, сохраняющей свежесть.</p>
+                
+                <div class="grid">
+                    <div class="product-card">
+                        <div class="product-card__badge">Хит продаж</div>
+                        <div class="product-card__img">🍗</div>
+                        <h3>Филе цыпленка-бройлера</h3>
+                        <p>Нежное диетическое большое филе тушки. Идеально подходит для запекания, жарки и супов.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__badge">Популярно</div>
+                        <div class="product-card__img">🥩</div>
+                        <h3>Мякоть бедра охлажденная</h3>
+                        <p>Сочное и мягкое мясо цыпленка без кости. Быстро готовится и сохраняет сочность.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card__badge">Новинка</div>
+                        <div class="product-card__img">🍿</div>
+                        <h3>Хрустящие наггетсы</h3>
+                        <p>Готовое решение для быстрого обеда. Нежное мясо в золотистой панировке.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ВКЛАДКА 3: О ПРОИЗВОДСТВЕ -->
+        <section id="about" class="tab-content">
+            <div class="container page-padding">
+                <h2 class="page-title">Замкнутый цикл качества</h2>
+                <div class="about-block">
+                    <div class="about-block__text">
+                        <h3>Как мы это делаем?</h3>
+                        <p>Торговая марка «Петруха» — один из ведущих производителей мяса птицы в Беларуси. Наше главное преимущество — полностью замкнутый цикл производства. Мы сами выращиваем зерно, производим натуральные комбикорма, контролируем инкубацию и гарантируем жесткое соблюдение температурного режима на каждом этапе транспортировки до магазина.</p>
+                        <ul class="about-list">
+                            <li>Строгий контроль качества на птицефабриках</li>
+                            <li>Без гормонов роста и искусственных добавок</li>
+                            <li>Герметичная инновационная упаковка</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ВКЛАДКА 4: РЕЦЕПТЫ -->
+        <section id="recipes" class="tab-content">
+            <div class="container page-padding">
+                <h2 class="page-title">Кулинарные идеи</h2>
+                <p class="page-subtitle">Простые и вкусные блюда из курицы «Петруха» на каждый день.</p>
+                
+                <div class="grid">
+                    <div class="recipe-card">
+                        <span class="recipe-card__time">⏱ 40 минут</span>
+                        <h3>Стейк из филе в духовке</h3>
+                        <p>Замаринуйте филе «Петруха» в оливковом масле со специями, запекайте при 180°C. Полноценный полезный обед готов!</p>
+                    </div>
+                    <div class="recipe-card">
+                        <span class="recipe-card__time">⏱ 25 минут</span>
+                        <h3>Сочные куриные биточки</h3>
+                        <p>Приготовьте фарш из мякоти бедра, добавьте зелень и обжарьте на сковороде до золотистой корочки.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Учебный проект-демо бренда «Петруха». Разработчик сайта: Роман Некрашевич</p>
+            <p>Контакты разработчика: <a href="mailto:Nekrashevichroman51@gmail.com">Nekrashevichroman51@gmail.com</a> | TG: @RV11111111</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const triggerButtons = document.querySelectorAll('.next-tab-trigger');
+
+            function switchTab(tabId) {
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                const targetTab = document.getElementById(tabId);
+                const targetBtn = document.querySelector(`[data-target="${tabId}"]`);
+                
+                if (targetTab) targetTab.classList.add('active');
+                if (targetBtn) targetBtn.classList.add('active');
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+                    switchTab(target);
+                });
+            });
+
+            triggerButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-to');
+                    switchTab(target);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
